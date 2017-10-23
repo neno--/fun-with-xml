@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<name
+        xmlns="urn:com.github.nenomm.xmlfun.schema"
+        xmlns:nickname="urn:com.github.nenomm.xmlfun.anotherSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.schema ./schemas/schema.xml urn:com.github.nenomm.xmlfun.anotherSchema ./schemas/anotherSchema.xml"
+        title="Mr.">
+
+    <first>John</first>
+    <middle>Fitzgerald Johansen</middle>
+    <last>Doe</last>
+    <nickname:nickname>
+        <nickname:nice>Johnny</nickname:nice>
+        <nickname:rude>Pointdexter</nickname:rude>
+        <nickname:funny>Funny Johnny</nickname:funny>
+    </nickname:nickname>
+
+</name>

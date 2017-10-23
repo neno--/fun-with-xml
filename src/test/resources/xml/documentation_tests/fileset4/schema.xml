@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--This is a comment-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:doc="urn:com.github.nenomm.xmlfun.comments"
+        targetNamespace="urn:com.github.nenomm.xmlfun.schema" elementFormDefault="qualified">
+
+    <element name="name">
+        <complexType doc:comments="this is a workaround for comment">
+            <sequence doc:comments="this is a workaround for comment">
+                <element name="first" type="string"/>
+                <element name="middle" type="string"/>
+                <element name="last" type="string"/>
+                <element ref="doc:someElement"/>
+            </sequence>
+            <attribute name="title" type="string" doc:comments="this is a workaround for comment"/>
+        </complexType>
+    </element>
+
+</schema>

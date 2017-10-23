@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<name
+        xmlns="urn:com.github.nenomm.xmlfun.schema.WRONG"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.schema.WRONG schema.xml"
+        title="Mr.">
+    <first>John</first>
+    <middle>Fitzgerald Johansen</middle>
+    <last>Doe</last>
+</name>
