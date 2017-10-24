@@ -1,5 +1,6 @@
-package com.github.nenomm.xmlfun;
+package com.github.nenomm.xmlfun.explicit;
 
+import com.github.nenomm.xmlfun.XmlTest;
 import org.junit.Test;
 
 import java.net.URISyntaxException;
@@ -14,7 +15,7 @@ public class IncludeSchemaTest extends XmlTest {
 	// HAPPY PATH
 	@Test
 	public void testCase18() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/include_tests/fileset18/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/include_tests/fileset18/document.xml"));
 	}
 
 	// chameleon namespace - included has no target namespace.
@@ -22,13 +23,13 @@ public class IncludeSchemaTest extends XmlTest {
 	// from "anonymous" XSD.
 	@Test
 	public void testCase19() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/include_tests/fileset19/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/include_tests/fileset19/document.xml"));
 	}
 
 	// cannot include different namespace
 	@Test
 	public void testCase20() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/include_tests/fileset20/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/include_tests/fileset20/document.xml"));
 	}
 
 }

@@ -1,5 +1,6 @@
-package com.github.nenomm.xmlfun;
+package com.github.nenomm.xmlfun.explicit;
 
+import com.github.nenomm.xmlfun.XmlTest;
 import org.junit.Test;
 
 import java.net.URISyntaxException;
@@ -14,33 +15,33 @@ public class ImportSchemaTest extends XmlTest {
 	// import is irrelevant if namespace is not used
 	@Test
 	public void testCase1() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/import_tests/fileset1/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/import_tests/fileset1/document.xml"));
 	}
 
 	// valid import path is mandatory if imported namespace is used
 	@Test
 	public void testCase2() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset2/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset2/document.xml"));
 	}
 
 	// instance document must conform to the XSD with imported elements!
 	// (missing nickname)
 	@Test
 	public void testCase3() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset3/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset3/document.xml"));
 	}
 
 	// instance document must use proper namespace prefix for all elements!
 	@Test
 	public void testCase4() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset4/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset4/document.xml"));
 	}
 
 	// HAPPY PATH
 	// Referring to an Existing Global Element
 	@Test
 	public void testCase5() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/import_tests/fileset5/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/import_tests/fileset5/document.xml"));
 	}
 
 	/*
@@ -60,14 +61,14 @@ public class ImportSchemaTest extends XmlTest {
 
 	@Test
 	public void testCase6() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset6/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset6/document.xml"));
 	}
 
 	// Referring to an Existing Global Type - although we 'hijack' the type for element, children are still from alien
 	// namespace...
 	@Test
 	public void testCase7() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/import_tests/fileset7/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/import_tests/fileset7/document.xml"));
 	}
 
 	// can we import namespace XSD without target namespace?
@@ -75,14 +76,14 @@ public class ImportSchemaTest extends XmlTest {
 	// nope
 	@Test
 	public void testCase8() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset8/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset8/document.xml"));
 	}
 
 	// how about the same namespace?
 	// nope - import prohibits this, parser won't allow it.
 	@Test
 	public void testCase9() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/import_tests/fileset9/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/import_tests/fileset9/document.xml"));
 	}
 }
 

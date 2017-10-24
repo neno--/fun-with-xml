@@ -1,5 +1,6 @@
-package com.github.nenomm.xmlfun;
+package com.github.nenomm.xmlfun.explicit;
 
+import com.github.nenomm.xmlfun.XmlTest;
 import org.junit.Test;
 
 import java.net.URISyntaxException;
@@ -14,13 +15,13 @@ public class DocumentationTest extends XmlTest {
 	// test plain comments
 	@Test
 	public void testCase1() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/documentation_tests/fileset1/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/documentation_tests/fileset1/document.xml"));
 	}
 
 	// not before the prolog
 	@Test
 	public void testCase2() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/documentation_tests/fileset2/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/documentation_tests/fileset2/document.xml"));
 	}
 
 	// attributes of non existant namespace
@@ -28,19 +29,19 @@ public class DocumentationTest extends XmlTest {
 	// an attribute from processors for which it has no meaning.
 	@Test
 	public void testCase3() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/documentation_tests/fileset3/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/documentation_tests/fileset3/document.xml"));
 	}
 
 	// however, if element is referenced from such namespace, exception is thrown (needs namespace import)
 	@Test
 	public void testCase4() throws URISyntaxException {
-		assertFalse(validateImplicit("xml/documentation_tests/fileset4/document.xml"));
+		assertFalse(validateExplicit("xml/explicit/documentation_tests/fileset4/document.xml"));
 	}
 
 	// use annotations (note that sample document does not exist)
 	@Test
 	public void testCase5() throws URISyntaxException {
-		assertTrue(validateImplicit("xml/documentation_tests/fileset5/document.xml"));
+		assertTrue(validateExplicit("xml/explicit/documentation_tests/fileset5/document.xml"));
 	}
 
 

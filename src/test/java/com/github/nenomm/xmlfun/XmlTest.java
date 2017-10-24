@@ -18,18 +18,22 @@ public class XmlTest {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	// todo: this way we probably won't need location attributes
-	public boolean validateExplicit(String classpathResourceXmlInstance, String classpathResourceSchema) throws URISyntaxException {
+	public boolean validateImplicit(String classpathResourceXmlInstance, String... classpathResourceSchemas) throws URISyntaxException {
 		Source xmlFile = new StreamSource(new File(this.getClass().getClassLoader()
 				.getResource(classpathResourceXmlInstance).toURI()));
 
-		Source schemaFile = new StreamSource(new File(this.getClass().getClassLoader()
-				.getResource(classpathResourceSchema).toURI()));
+		Source[] schemaSources = new Source[classpathResourceSchemas.length];
+		for (int i = 0; i < classpathResourceSchemas.length; i++) {
+			schemaSources[i] = new StreamSource(new File(this.getClass().getClassLoader()
+					.getResource(classpathResourceSchemas[i]).toURI()));
+
+		}
 
 		SchemaFactory schemaFactory = SchemaFactory
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 
 		try {
-			Schema schema = schemaFactory.newSchema(schemaFile);
+			Schema schema = schemaFactory.newSchema(schemaSources);
 			Validator validator = schema.newValidator();
 			validator.validate(xmlFile);
 			logger.info("{} is valid.", xmlFile.getSystemId());
@@ -41,7 +45,7 @@ public class XmlTest {
 		return false;
 	}
 
-	public boolean validateImplicit(String classpathResourceXmlInstance) throws URISyntaxException {
+	public boolean validateExplicit(String classpathResourceXmlInstance) throws URISyntaxException {
 		Source xmlFile = new StreamSource(new File(this.getClass().getClassLoader()
 				.getResource(classpathResourceXmlInstance).toURI()));
 
