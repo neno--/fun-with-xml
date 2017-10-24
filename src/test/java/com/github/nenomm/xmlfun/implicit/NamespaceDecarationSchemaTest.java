@@ -8,8 +8,7 @@ import java.net.URISyntaxException;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-// schema files are not provided to the parser explicitly, via constructor;
-// rather, they are resolved from actual documents.
+// parsers receives needed XSD files implicitly, programmatically, rather than by looking at location attributes.
 public class NamespaceDecarationSchemaTest extends XmlTest {
 
 	// test happy path - with location

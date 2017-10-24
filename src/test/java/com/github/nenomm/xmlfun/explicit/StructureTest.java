@@ -8,7 +8,7 @@ import java.net.URISyntaxException;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-// schema files are not provided to the parser explicitly, via constructor, rather, they are resolved from actual documents.
+// schema files are provided to the parser explicitly, via XML documents;
 public class StructureTest extends XmlTest {
 
 	// test global declaration
