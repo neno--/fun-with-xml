@@ -24,14 +24,14 @@ public class DocumentationTest extends XmlTest {
 	}
 
 	// attributes of non existant namespace
-	// from the Book (Beggingin XML, 5th ed.): Its purpose here is effectively to hide
+	// from the Book (Beginning XML, 5th ed.): Its purpose here is effectively to hide
 	// an attribute from processors for which it has no meaning.
 	@Test
 	public void testCase3() throws URISyntaxException {
 		assertTrue(validateImplicit("xml/documentation_tests/fileset3/document.xml"));
 	}
 
-	// however, is element is references from such namespace, exception is thrown (needs import)
+	// however, if element is referenced from such namespace, exception is thrown (needs namespace import)
 	@Test
 	public void testCase4() throws URISyntaxException {
 		assertFalse(validateImplicit("xml/documentation_tests/fileset4/document.xml"));

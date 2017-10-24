@@ -19,7 +19,7 @@ public class StructureTest extends XmlTest {
 	// xml is just one simple type!
 	// instance root can be any of the elements which are direct descendants of schema element in XSD!!
 	// this example is for first element definition
-	// this is also mentioned in the Book (Begging XML, 5th ed.): When attempting to find the declaration for the root
+	// this is also mentioned in the Book (Beginning XML, 5th ed.): When attempting to find the declaration for the root
 	// element, the schema validator looks through only the global element declarations.
 	@Test
 	public void testCase2() throws URISyntaxException {
