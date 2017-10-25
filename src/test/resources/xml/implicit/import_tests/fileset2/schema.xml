@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:another="urn:com.github.nenomm.xmlfun.anotherSchema"
+        targetNamespace="urn:com.github.nenomm.xmlfun.schema" elementFormDefault="qualified">
+
+    <import namespace="urn:com.github.nenomm.xmlfun.anotherSchema" schemaLocation="WRONG_anotherSchema.xml"/>
+
+    <element name="name">
+        <complexType>
+            <sequence>
+                <element name="first" type="string"/>
+                <element name="middle" type="string"/>
+                <element name="last" type="string"/>
+                <element ref="another:nickname"/>
+            </sequence>
+            <attribute name="title" type="string"/>
+        </complexType>
+    </element>
+
+</schema>

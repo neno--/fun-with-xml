@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <element name="nickname">
+        <complexType>
+            <sequence>
+                <element name="nice" type="string"/>
+                <element name="rude" type="string"/>
+                <element name="funny" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

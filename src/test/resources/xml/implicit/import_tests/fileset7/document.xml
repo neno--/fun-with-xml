@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<name
+        xmlns="urn:com.github.nenomm.xmlfun.schema"
+        xmlns:another="urn:com.github.nenomm.xmlfun.anotherSchema"
+
+        title="Mr.">
+    <first>John</first>
+    <middle>Fitzgerald Johansen</middle>
+    <last>Doe</last>
+    <myNickname>
+        <another:nice></another:nice>
+        <another:rude></another:rude>
+        <another:funny></another:funny>
+    </myNickname>
+</name>
