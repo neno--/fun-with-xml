@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:nickname="urn:com.github.nenomm.xmlfun.anotherSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.anotherSchema anotherSchema.xml"
+        targetNamespace="urn:com.github.nenomm.xmlfun.schema" elementFormDefault="qualified">
+
+    <import namespace="urn:com.github.nenomm.xmlfun.anotherSchema" schemaLocation="./anotherSchema.xml"/>
+
+    <!-- local declaration - not referencable from other parts of the schema -->
+
+    <element name="name">
+        <complexType>
+            <sequence>
+                <element name="first" type="string"/>
+                <element name="middle" type="string"/>
+                <element name="last" type="string"/>
+                <element ref="nickname:nickname"/>
+            </sequence>
+            <attribute name="title" type="string"/>
+        </complexType>
+    </element>
+</schema>

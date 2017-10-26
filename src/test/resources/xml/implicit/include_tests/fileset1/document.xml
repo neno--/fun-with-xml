@@ -6,4 +6,9 @@
     <first>John</first>
     <middle>Fitzgerald Johansen</middle>
     <last>Doe</last>
+    <nickname>
+        <nice></nice>
+        <rude></rude>
+        <funny></funny>
+    </nickname>
 </name>

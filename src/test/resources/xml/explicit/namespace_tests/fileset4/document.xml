@@ -3,7 +3,6 @@
         xmlns="urn:com.github.nenomm.xmlfun.schema"
         xmlns:unused="urn:com.github.nenomm.xmlfun.schema.EXTRA"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.schema schema.xml urn:com.github.nenomm.xmlfun.schema.unused notexists.xml"
         title="Mr.">
     <first>John</first>
     <middle>Fitzgerald Johansen</middle>

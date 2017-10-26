@@ -3,6 +3,7 @@
         xmlns="urn:com.github.nenomm.xmlfun.schema"
         xmlns:nickname="urn:com.github.nenomm.xmlfun.anotherSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.schema ./schemas/schema.xml urn:com.github.nenomm.xmlfun.anotherSchema ./schemas/anotherSchema.xml"
         title="Mr.">
 
     <first>John</first>
