@@ -102,6 +102,18 @@ public class ImportSchemaTest extends XmlTest {
 				"xml/implicit/import_tests/fileset9/schema.xml",
 				"xml/implicit/import_tests/fileset9/anotherSchema.xml"));
 	}
+
+	// what about if we want to define a type in the schema that uses an element from another namespace.
+	// but we do not want to embed this element. we just want to use in, so we just need a namespace for it.
+	// we use it in xml just by providing namespace declaration, right?
+	// in XSD type definition, it is just not legal to include other XML elements. Only those defined in
+	// "http://www.w3.org/2001/XMLSchema" namespace.
+	@Test
+	public void testCase10() throws URISyntaxException {
+		assertFalse(validateImplicit("xml/implicit/import_tests/fileset10/document.xml",
+				"xml/implicit/import_tests/fileset10/schema.xml",
+				"xml/implicit/import_tests/fileset10/anotherSchema.xml"));
+	}
 }
 
 

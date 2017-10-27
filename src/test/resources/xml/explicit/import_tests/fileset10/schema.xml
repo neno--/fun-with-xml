@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:another="urn:com.github.nenomm.xmlfun.anotherSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="urn:com.github.nenomm.xmlfun.schema" elementFormDefault="qualified"
+        xsi:schemaLocation="urn:com.github.nenomm.xmlfun.anotherSchema anotherSchema.xml">
+
+    <import namespace="urn:com.github.nenomm.xmlfun.anotherSchema" schemaLocation="anotherSchema.xml"/>
+
+    <element name="name">
+        <complexType>
+            <sequence>
+                <element name="first" type="string"/>
+                <element name="middle" type="string"/>
+                <element name="last" type="string"/>
+                <another:nickname>
+                    <another:nice>hi there</another:nice>
+                    <another:rude>how about</another:rude>
+                    <another:funny>this case</another:funny>
+                </another:nickname>
+            </sequence>
+            <attribute name="title" type="string"/>
+        </complexType>
+    </element>
+
+</schema>
