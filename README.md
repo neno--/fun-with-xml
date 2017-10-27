@@ -34,3 +34,16 @@ Import and include statements **must** have location (schemaLocation) attribute.
 ##### Namespaces and Documentation
 Attributes can be used for documentation, beacuse they will be ignored from validation process, if they are bound to some foreign namespace.
 In this case, (when namespace is only used to reference attributes) location can be ommited, and parser never needs to know this information.
+
+##### Test Results
+Import and include tests have the same assertions, therefore location information mandatory.
+Namespace declaration have different assertions, in particular:
+
+| Test Case | Test | Explicit | Implicit |
+|-----------|------|----------|----------|
+| `schemaLocation` ommited | `NamespaceDecarationSchemaTest#testCase1` | fail | success |
+|relative paths| `NamespaceDecarationSchemaTest#testCase5` | fail | success |
+| bad name-location pair | `NamespaceDecarationSchemaTest#testCase6` | fail | success |
+
+This is beacuse parser have always chance to recover, if proper XSDs are implicitly provided.
+But this is probably implementation dependant.
