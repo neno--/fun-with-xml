@@ -3,7 +3,7 @@
         xmlns:another="urn:com.github.nenomm.xmlfun.anotherSchema"
         targetNamespace="urn:com.github.nenomm.xmlfun.schema" elementFormDefault="qualified">
 
-    <import namespace="urn:com.github.nenomm.xmlfun.anotherSchema" schemaLocation="WRONG_anotherSchema.xml"/>
+    <import namespace="urn:com.github.nenomm.xmlfun.anotherSchema"/>
 
     <element name="name">
         <complexType>
